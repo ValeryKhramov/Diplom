@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div class="inputs">
+		<div class="inputs-block__container _container">
+			<div class="inputs-block input">
+				<div class="input__info">
+					<h1 class="input__text">Вход в аккаунт</h1>
+				</div>
+				<div class="input__form form">
+					<form method="post">
+					{% csrf_token %}
+					<div class="form__username form">
+						<div class="username__label label">
+							{{ form.username.label }}
+						</div>
+						<div class="username">
+							{{ form.username }}
+						</div>
+						
+					</div>
+					<div class="form_password form">
+						<div class="password__label label">
+							{{ form.password.label }}
+						</div>
+						<div class="password">
+							{{ form.password }}
+						</div>
+						
+					</div>
+					<div class="button__form form">
+						<button class="form__button" type="submit">Войти в систему</button>
+					</div>
+				</form>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

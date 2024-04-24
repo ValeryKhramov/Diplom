@@ -1,0 +1,42 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+	<div class="account">
+		<div class="account-block__container _container">
+			<div class="accounts">
+				<div class="account__navigation">
+					<div id="one"class="navigation__info info">
+						<div id="button__one"class="information">	
+							<div class="div">
+								<a class="a" href="{% url 'account' %}">Личные данные</a>
+							</div>
+						</div>
+					</div>
+					<div class="navigation__history info">
+						<div id="bitton__two"class="information">
+							<div class="div">
+								<a class="a" href="{% url 'history' %}">График работы</a>
+							</div>
+						</div>
+					</div>
+					<div class="navigation__montage info">
+						<div id="button__three"class="information">
+							<div class="div">
+								<a class="a" href="{% url 'montage' %}">История монтажа</a>
+							</div>
+						</div>
+					</div>
+					<div class="navigation__out">
+						<button class="out"><a href="{% url 'logout' %}">Выход</a></button>
+					</div>
+				</div>
+					<div class="account__develop">
+						<div class="dev__information">
+							<p class="develo__info">Раздел {{ title }} временно недоступен.<br>Находится в разработке.</p>
+						</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

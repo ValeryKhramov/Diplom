@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+	<div class="contacts">
+		<div class="contacts-block__container _container">
+			<div class="contacts-block contact">
+				<div class="contacts__name">
+					<p class="contacts__p">Контакты</p>
+				</div>
+
+				<div class="contact__info" id="first">
+					<div class="contact__img"><img src="{% static 'images/Mobile.png' %}" alt="" class="contact__img"></div>
+					<div class="contact__post"><p class="contact__text">+7 (993) 734-66-79</p></div>
+					
+				</div>
+				<div class="contact__info">
+					<div class="contact__img">
+						<img src="{% static 'images/Email.png' %}" alt="" class="contact__img">
+					</div>
+					<div class="contact__post">
+						<p class="contact__text">chickenhouse@internet.ru</p>
+					</div>
+					
+				</div>
+				<div class="contact__info" id="last">
+					<div class="contact__img">
+						<img src="{% static 'images/Address.png' %}" alt="" class="contact__img">
+					</div>
+					<div class="contact__post">
+						<p class="contact__text">г.Рузаевка, ул. Ленина, д. 79, оф. 66</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+<!--	 <div class="contact_div">
+	 	<p id="contact_name">Контакты</p>
+	 	<div id="number">
+	 		<img  id="phone_img" src="{% static 'images/phone.png' %}">
+	 		<p id="phone_info">+7 (993) 734-66-79</p>
+
+	 	</div>
+	 	<div id="email">
+	 		<img id="email_img" src="{% static 'images/email.png' %}">
+	 		<p id="email_info">chickenhouse@internet.ru</p>
+	 	</div>
+	 	<div id="address">
+	 		<img id="address_img" src="{% static 'images/address.png' %}">
+	 		<p id="address_info">г.Рузаевка, ул. Ленина, д. 79, оф. 66</p>
+	 	</div>
+	 </div> -->
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+	<div class="account">
+		<div class="account-block__container _container">
+			<div class="accounts">
+				<div class="account__navigation">
+					<div id="one"class="navigation__info info">
+						<div id="button__one"class="information">	
+							<div class="div">
+								<a class="a" href="{% url 'account' %}">Личные данные</a>
+							</div>
+						</div>
+					</div>
+					<div class="navigation__history info">
+						<div id="bitton__two"class="information">
+							<div class="div">
+								<a class="a" href="{% url 'history' %}">График работы</a>
+							</div>
+						</div>
+					</div>
+					<div class="navigation__montage info">
+						<div id="button__three"class="information">
+							<div class="div">
+								<a class="a" href="{% url 'montage' %}">История монтажа</a>
+							</div>
+						</div>
+					</div>
+					<div class="navigation__out">
+						<button class="out"><a href="{% url 'logout' %}">Выход</a></button>
+					</div>
+				</div>
+					<div class="account__information">
+						<div class="info__img">
+							<img src="{% static 'images/no_photo.png'%}" alt="" class="photo">
+						</div>
+						<div class="information__person">
+							<p class="names">Имя:	{{ request.user.first_name }}</p>
+							<p class="last_name">Фамилия:	{{ request.user.last_name }}</p>
+							<p class="number_phone">Номер телефона:    {{ request.user.number_phone}}</p>
+							<p class="email">Email:    {{ request.user.email }}</p>
+							<p class="post">Должность:    {{ request.user.groups.all.first}}</p>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

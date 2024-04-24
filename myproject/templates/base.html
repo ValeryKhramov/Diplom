@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	{% load static %}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png"href="{% static 'images/logo.png' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+	<title>{{ title }}</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container _container">
+				<img class="header__img"src="{% static 'images/logo.png' %}">
+				<h1 class="header__logo">Chicken House</h1>
+				<nav class="header__menu menu">
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a href="{% url 'index' %}" class="menu__link">Главная</a>
+						</li>
+						<li class="menu__item">
+							<a href="{% url 'services' %}" class="menu__link">Услуги</a>
+						</li>
+						<li class="menu__item">
+							<a href="{% url 'contacts' %}" class="menu__link">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+					{% if request.user.is_authenticated %}
+					<button class="header__button_p"><a href="{% url 'account' %}" class="button__link">Профиль</a></button>
+					{% else %}
+					<button class="header__button"><a href="{% url 'inputs' %}" class="button__link">Войти</a></button>
+					{% endif %}
+			</div>
+		</header>
+		{% block content %}
+			<main class="page">
+				<div class="page__main-block main-block">
+					<div class="main-block__container _container">
+						<div class="main-block__first first">
+							<div class="first__image">
+								<img src="{% static 'images/logo.png' %}" alt="Логотип" class="first__img">
+							</div>
+							<div class="first__description">
+								<h1 class="first__name">Chicken House</h1>
+								<p class="first__slogan">«Ваш надёжный партнёр в монтаже птицеводческого оборудования»</p>
+							</div>
+						</div>
+						<div class="main-block__second second">
+							<h2 class="second__about">О нас</h2>
+							<p class="second__text">Мы - организация, специализирующаяся на монтаже птицеводческого оборудования. Оказываем свои услуги с 2010 годы. Наш многолетний опыт и профессиональные сотрудники позволяют нам воплощать объекты наивысшего качества. Если вам нужно расширить свою птицефабрику или начал ее строительство и монтаж оборудования, то вам следует обратиться исключительно в Chicken House. Мы удовлетворим все ваши потребности в этом запросе.</p>
+						</div>
+						<div class="main-block__three three">
+							<div class="three__year year">
+								<p class="year__name name">Опыт работы</p>
+								<div class="year__elips elips">
+									<p class="elips__info">13+</p>
+								</div>
+							</div>
+							<div class="three__worker worker">
+								<p class="worker__name name">Количество рабочих</p>
+								<div class="worker__elips elips">
+									<p class="elips__info">30+</p>
+								</div>
+							</div>
+							<div class="three__object object">
+								<p class="object__name name">Готовых объектов</p>
+								<div class="object__elips elips">
+									<p class="elips__info">150+</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		{% endblock %}
+		<footer class="footer">
+			<div class="footer__container _container">
+				<div class="footer__number number">
+					<div class="number__img">
+						<img src="{% static 'images/phone.png' %}" alt="" class="number__img">
+					</div>
+					<div class="number__info">
+						<p>+7 (993) 734-66-79</p>
+					</div>
+				</div>
+				<div class="footer__info">
+					<p>©️ Все права защищены 2024</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

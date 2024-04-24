@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	{% load static %}
+	<main class="service">
+		<div class="service-block__container _container">			
+			<div class="service__firts">
+				<h1 class="info__name">Предоставляемые услуги</h1>
+				<div class="service__info">
+					<div class="service__work">
+						<img src="{% static 'images/montage.png' %}"alt="" class="montage__img">
+						<p class="montage_info">Монтаж оборудования</p>
+					</div>
+
+					<div class="service__work">				
+						<img src="{% static 'images/demontage.png' %}" alt="" class="montage__img">
+						<p class="montage_info">Демонтаж оборудования</p>
+					</div>
+
+					<div class="service__work">
+						<img src="{% static 'images/build.png' %}" alt="" class="montage__img">
+						<p class="montage_info">Строительство цехов</p>
+					</div>
+				</div>	
+			</div>
+			<div class="service__second second">
+				<div class="second__info">
+					<h1 class="second__info_h1">Монтируемое оборудование</h1>
+				</div>
+				<div class="second__equipment equipment">
+					<div class="equipment__image">
+						<img src="{% static 'images/valli.png' %}" alt="" class="equipment__img">
+					</div>
+					<div class="equipment__description description">
+						<div class="description__image">
+							<img src="{% static 'images/valli_logo.png' %}" alt="" class="description__img">
+						</div>
+						<div class="description__post">
+							<p class="description__text">Птицеводческое оборудование Valli включает многоступенчатую клеточную батарею для несушек Volo — VLV Plus. Эта система разработана для обеспечения наилучшего благополучия птиц и простоты управления со стороны оператора. Она состоит из трёх уровней и предлагает оптимальное соотношение между полезной площадью, местом для кормления и насестами.</p>
+						</div>
+						
+					</div>
+				</div>
+				<div class="second__equipment equipment">
+					<div class="equipment__description description">
+						<div class="description__image">
+							<img src="{% static 'images/tehno_logo.png' %}" alt="" class="description__img">
+						</div>
+						<div class="description__post">
+							<p class="description__text">Птицеводческое оборудование «Техна» — это современные решения для модернизации и создания новых линий по выращиванию птицы и производству яиц. Компания предлагает различные технологии, такие как напольная система Multifloor и система содержания несушек EGGoist, разработанные с учётом новых стандартов гуманного выращивания птицы. Оборудование «Техна» эффективно использует пространство, обеспечивает комфорт для птицы и лёгкость в обслуживании и ремонте.</p>
+						</div>
+						
+					</div>
+					<div class="equipment__image">
+						<img src="{% static 'images/tehno.png' %}" alt="" class="equipment__img">
+					</div>
+				</div>
+				<div class="second__equipment equipment">
+					<div class="equipment__image">
+						<img src="{% static 'images/facco.png' %}" alt="" class="equipment__img">
+					</div>
+					<div class="equipment__description description">
+						<div class="description__image">
+							<img src="{% static 'images/facco_logo.png' %}" alt="" class="description__img">
+						</div>
+						<div class="description__post">
+							<p class="description__text">Птицеводческое оборудование Facco производится итальянской компанией Facco S.P.A., основанной в 1957 году. Facco специализируется на оборудовании для выращивания и содержания птицы, включая проекты «под ключ», сборные конструкции птичников, клеточные батареи, установки для выращивания бройлеров и родительского стада, системы кормления, конвейеры сбора яиц и другое оборудование.</p>
+						</div>
+						
+					</div>
+				</div>
+				<div class="second__equipment equipment">
+					<div class="equipment__description description">
+						<div class="description__image">
+							<img src="{% static 'images/big_logo.png' %}" alt="" class="description__img">
+						</div>
+						<div class="description__post">
+							<p class="description__text">Птицеводческое оборудование Big Duchman включает системы кормления, поения и птичники с ручным и автоматическим сбором яйца. Оно предназначено для эффективного выращивания ремонтного молодняка и содержания родительского стада птицы. Оборудование обеспечивает оптимальные условия для разных групп птиц и гарантирует максимальную эффективность производства.</p>
+						</div>
+						
+					</div>
+					<div class="equipment__image">
+						<img src="{% static 'images/big.png' %}" alt="" class="equipment__img">
+					</div>
+				</div>	
+			</div>
+		</div>             
+	</main>
+<!--	<div id="services_info">
+		<div id="services_name_div"><p id="services_name">Предоставляемые услуги</p></div>
+		<div id="services_img">
+			<img id="img_one"src="{% static 'images/one.png' %}">
+			<img id="img_two"src="{% static 'images/two.png' %}">
+			<img id="img_three"src="{% static 'images/three.png' %}">
+		</div>
+		<div id="img_info">
+			<p id="img_info_one">Монтаж оборудования</p>
+			<p id="img_info_two">Демонтаж оборудования</p>
+			<p id="img_info_three">Строительсво цеха</p>
+		</div>
+	</div>
+	<div class="equipment">
+		<p id="equipment_info">Монтируемое оборудование</p>
+		<div class="valli">
+			<img  class='img_equipment' id="img_equipment_one"src="{% static 'images/valli.png' %}">
+			<div>
+				<img id="valli_logo" src="{% static 'images/valli_logo.png' %}">
+				<p id="valli_description">Птицеводческое оборудование Valli включает многоступенчатую клеточную батарею для несушек Volo — VLV Plus. Эта система разработана для обеспечения наилучшего благополучия птиц и простоты управления со стороны оператора. Она состоит из трёх уровней и предлагает оптимальное соотношение между полезной площадью, местом для кормления и насестами.</p>
+			</div>
+		</div>
+		<div class="tehno">
+			<div>
+				<img id="valli_logo" src="{% static 'images/tehna_logo.png' %}">
+				<p id="valli_description">Птицеводческое оборудование «Техна» — это современные решения для модернизации и создания новых линий по выращиванию птицы и производству яиц. Компания предлагает различные технологии, такие как напольная система Multifloor и система содержания несушек EGGoist, разработанные с учётом новых стандартов гуманного выращивания птицы. Оборудование «Техна» эффективно использует пространство, обеспечивает комфорт для птицы и лёгкость в обслуживании и ремонте.</p>
+			</div>
+			<img class='img_equipment' id="img_equipment_four" src="{% static 'images/tehno.png' %}">
+		</div>
+		<div class="facco">
+			<img class='img_equipment' id="img_equipment_three" src="{% static 'images/facco.png' %}" >
+			<div>
+				<img id="valli_logo" src="{% static 'images/facco_logo.svg' %}">
+				<p id="valli_description">Птицеводческое оборудование Facco производится итальянской компанией Facco S.P.A., основанной в 1957 году. Facco специализируется на оборудовании для выращивания и содержания птицы, включая проекты «под ключ», сборные конструкции птичников, клеточные батареи, установки для выращивания бройлеров и родительского стада, системы кормления, конвейеры сбора яиц и другое оборудование.</p>
+			</div>
+		</div>
+		<div class="big_dutchman">
+			<div>
+				<img id="valli_logo" src="{% static 'images/bigdutchman_logo.svg' %}">
+				<p id="valli_description">Птицеводческое оборудование Big Duchman включает системы кормления, поения и птичники с ручным и автоматическим сбором яйца. Оно предназначено для эффективного выращивания ремонтного молодняка и содержания родительского стада птицы. Оборудование обеспечивает оптимальные условия для разных групп птиц и гарантирует максимальную эффективность производства.</p>
+			</div>
+			<img class='img_equipment' id="img_equipment_two" src="{% static 'images/big_dutchman.png' %}">
+		</div>
+	</div>-->
+{% endblock %}
