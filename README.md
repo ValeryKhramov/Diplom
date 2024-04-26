@@ -1,3 +1,3 @@
 ﻿# Дипломный проект
-## Логин: administration
-## Пароль: password
+Логин: administration
+Пароль: password
